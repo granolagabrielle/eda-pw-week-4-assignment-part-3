@@ -13,7 +13,7 @@ return true;
 
 // Test addItem function. Returns true.
 console.log(addItem('Socks'));
-console.log(addItem('New shoes'));
+console.log(addItem('Shoes'));
 console.log(`Items in your basket: ${basket}`);
 
 // Function to log each item in the basket
@@ -22,7 +22,7 @@ for (item of basket) {
     console.log(item);
 }
 }
-
+console.log(basket)
 // Test listItems function
 listItems()
 
@@ -39,10 +39,32 @@ console.log(basket)
 
 // STRETCH GOALS:
 
+// 1. Declare maxItems variable
+const maxItems = 5;
 
+// 2. Create isFull function
+function isFull(maxItems) {
+    if (basket.length < maxItems) {
+        return false
+    } else {
+        return true 
+    }
+}
 
+// Test isFull function -- returns true
+console.log(basket);
+console.log(isFull());
 
+// Add more items and test again
+console.log(addItem('Socks'));
+console.log(addItem('Shoes'));
+console.log(addItem('Pants'));
+console.log(addItem('Shirt'));
+console.log(addItem('Sweatshirt'));
+console.log(basket);
 
+// Test isFull
+console.log(isFull());
 
 
 // DO NOT MODIFY
